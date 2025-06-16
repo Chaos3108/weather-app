@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Weather from './weather';
+
+import SearchContainer from './SearchContainer';
 
 function App() {
   return (
     <div>
-      <Weather/>
+      <SearchContainer/>
     </div>
   );
 }
