@@ -37,7 +37,7 @@ export default function SearchContainer() {
           Search
         </button>
       </div>
-      {loading && <p>Loading data…</p>}
+      {loading && <p>Loading data...</p>}
       {console.log(weatherData.length)}
       {weatherData && weatherData.current && (
         <div className="weather-cards">
