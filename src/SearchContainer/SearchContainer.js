@@ -8,8 +8,8 @@ export default function SearchContainer() {
   const [loading, setLoading] = React.useState(false);
 
   const searchWeather = async () => {
+    setLoading(true);
     try {
-      setLoading(true);
       const response = await axios.get(
         `https://api.weatherapi.com/v1/current.json?key=da07c76d5031452ea49115615251606&q=${search}`
       );
@@ -37,7 +37,7 @@ export default function SearchContainer() {
           Search
         </button>
       </div>
-      {loading && <p className="search-container">Loading data…</p>}
+      {loading && <p>Loading data…</p>}
       {console.log(weatherData.length)}
       {weatherData && weatherData.current && (
         <div className="weather-cards">
